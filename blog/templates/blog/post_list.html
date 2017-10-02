@@ -6,20 +6,15 @@
 </head>
 <body>
     <div>
-                <h1><a href="">Ghost8Recon blog</a></h1>
-            </div>
+        <h1><a href="">Ghost8Recon blog</a></h1>
+    </div>
+     {% for post in posts %}
+        <div>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <p>published: {{ post.published_date }}</p>
+        </div>
+     {% endfor %}
 
-            <div>
-                <p>published: 03.10.2017, 01:10</p>
-                <h2><a href="">My first post</a></h2>
-                <p>After democracy finally shunted aside hereditary lords, they found new means to protect their extravagant riches. For all the modern tales of noble poverty and leaking ancestral homes, their private wealth and influence remain phenomenal</p>
-            </div>
-
-            <div>
-                <p>published: 03.10.2017, 01:10</p>
-                <h2><a href="">My second post</a></h2>
-                <p>"I don’t think almost any of the problems I see today would worry me, if we knew how to work together and how to think through problems together in a rational way that wove together fears and needs with a rational understanding of the world.”
-                    So said Nobel laureate Saul Perlmutter at Times Higher Education’s World Academic Summit at the University of California, Berkeley in September last year</p>
-            </div>
 </body>
 </html>
